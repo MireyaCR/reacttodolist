@@ -7,14 +7,15 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const Home = () => {
 	const [tareas, setTareas] = useState([]);
 	return (
-		<div className="container">
-			<input type="text" placeholder='What needs to be done?' onKeyDown={(event)=>{
+		<div className="container h-25 mt-5 p-5">
+			<h3>Tasks</h3>
+			<input className="form-control sm mb-3"type="text" placeholder='What needs to be done?' onKeyDown={(event)=>{
 				if (event.key === 'Enter') {
 					setTareas([...tareas, event.target.value])
 					event.target.value=""
 				}
 			}} />
-			<ul className="list-group flush">
+			<ul className="list-group list-group-flush">
 				{tareas.map((element, index) => <li key={index+'li'} className="list-group-item"
 				onMouseEnter={(event)=>{
 					event.target.childNodes[1].style.visibility="visible"
@@ -28,6 +29,7 @@ const Home = () => {
 				}}>x</button>
 				</li>)}	
 			</ul>
+			<p><small>{tareas.length} Task</small></p>
 		</div>
 )};
 
