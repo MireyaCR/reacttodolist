@@ -4,15 +4,6 @@ import React, { useState } from 'react';
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 
-//create the array
-
-
-// {tarea.map((element, index) => {
-// 	return (         			 
-// 		<li className={element}>texto de la tarea</li>		
-// 	)});
-
-
 const Home = () => {
 	const [tareas, setTareas] = useState([]);
 	return (
