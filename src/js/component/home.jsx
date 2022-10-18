@@ -23,10 +23,10 @@ const Home = () => {
 				onMouseLeave={(event)=>{
 					event.target.childNodes[1].style.visibility="hidden"
 				}}>{element}
-				<button key={index} onClick={(event)=>{
+				<button className="btn btn-outline-danger btn-close" key={index} onClick={(event)=>{
 					tareas.splice(index,1)
 					setTareas([...tareas])
-				}}>x</button>
+				}}></button>
 				</li>)}	
 			</ul>
 			<p><small>{tareas.length} Task</small></p>
